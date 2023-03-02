@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>signup page</title>
+	<style>
+		*{	
+			box-sizing:border-box;
+		}
+		.container{
+			margin:0 auto;
+			width:450px;
+			box-shadow:0 0 8px #ccc;
+			border-radius:5px;
+		}
+		.row{
+			display:flex;
+			flex-wrap:wrap;
+			justify-content:space-between;
+		}
+		input{
+			width:100%;
+			height:40px;
+			margin-bottom:20px;
+			color: #8d949e;
+			border-radius:5px;
+			border:1px solid #ccc;
+			padding:0 10px;
+			font-size:14px
+		}
+		.top{
+			background-color:#f5f6f7;
+		}
+		input::focus-visible{
+			border:1px solid #ccc;
+		}
+		.col-lg-6{
+			width:49%;
+		}
+		.col-lg-2{
+			width:30%;
+		}
+		.head{
+			padding:20px;
+		}
+		#form{
+			padding:20px;
+			border-top:1px solid #ccc;
+		}
+		h2{
+			margin:0;
+			font-size: 32px;
+		}
+		p{
+			margin:0;
+			color: #606770;
+		}
+		.bor{
+			padding:6px;
+			margin:1px 0;
+			border:1px solid #ccc;
+			border-radius:5px;
+		}
+		input[type="radio"]{
+			margin:0;
+			height:auto;
+			width:auto;
+			
+		}
+		.al{
+			display:flex;
+			flex-wrap:wrap;
+			align-items:center;
+			justify-content:space-between;
+		}
+		label{
+			font-size:16px;
+		}
+		.last{
+		    color: #777;
+			font-size: 12px;
+			margin:10px 0;
+		}
+		a{
+			text-decoration:none;
+			color:#385898;
+		}
+		a:hover{
+			text-decoration:underline;
+		}
+		.lastbtn{
+			text-align:center;
+		}
+		button{
+			background-color: #00a400;
+			border: none;
+			border-radius:5px;
+			color: #fff;
+			font-size: 18px;
+			padding:10px 55px;
+			cursor:pointer;
+		}
+		button:hover{
+			opacity:0.8;
+		}
+	</style>
+</head>
+<body>
+	<section class="signup">
+		<div class="container">
+			<div class="head">
+				<h2>Sign Up</h2>
+				<p>It's quick and easy.</p>
+			</div>
+			<form id = "form">
+				<div class="row">
+					<div class="col-lg-6">
+						<input class="top" type="text" id = "name" placeholder="First name">
+					</div>
+					<div class="col-lg-6">
+						<input class="top" type="text" id = "surname" placeholder="Surname">
+					</div>
+					<input class="top" type="text" id = "email" placeholder="Mobile number or email address">
+					<input class="top" type="password" id = "password" placeholder="New password">
+					<p>Date of birth</p>	
+					<input type="date"> 
+				</div>
+					<p class="d-b">Gender</p>
+				<div class="row">	
+					<div class="col-lg-2">
+						<div class="bor al">
+							<label for="female">Female</label>
+							<input type="radio" name="gender" id ="female">
+						</div>
+					</div>
+					<div class="col-lg-2">
+						<div class="bor al">
+							<label for="Male">Male</label>
+							<input type="radio" name="gender" id ="Male">
+						</div>
+					</div>
+					<div class="col-lg-2">
+						<div class="bor al">
+							<label for="Custom">Custom</label>
+							<input type="radio" name="gender" id ="Custom">
+						</div>
+					</div>
+				</div>
+				<p class="last">People who use our service may have uploaded your contact information to Facebook. <a href="">Learn more</a>.</p>
+				<p class="last">By clicking Sign Up, you agree to our <a href="">Terms, Privacy Policy</a> and <a href="">Cookies Policy</a>. You may receive SMS notifications from us and can opt out at any time.</p>
+				<div class="lastbtn">
+					<button>Sign Up</button>
+				</div>	
+			</form>
+		</div>
+	</section>
+	<script src="js/main.js"></script>
+</body>
+</html>

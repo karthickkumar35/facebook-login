@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>login page</title>
+	<style>
+		*{	
+			box-sizing:border-box;
+		}
+		.container{
+			margin:0 auto;
+			width:100%;
+			padding:100px;
+			background-color:#edf0f5;
+		}
+		.row{
+			display:flex;
+			flex-wrap:wrap;
+			justify-content:space-between;
+		}
+		img{
+			height:100px;
+			width:auto;
+			margin:0;
+		}
+		.fb-head{
+			font-size:35px;
+			margin:0 0 0 30px;
+		}
+		.col-lg-7{
+			width:60%;
+		}
+		.col-lg-5{
+			width:40%;
+		}
+		.left{
+			padding:0 50px;
+		}
+		.right{
+			background-color:#fff;
+			padding:20px;
+			box-shadow:0 0 8px #ccc;
+			text-align:center;
+			border-radius:10px;
+		}
+		.last{
+			margin:0 70px 0 0px;
+			text-align:center;
+		}
+		input{
+			width:100%;
+			height:50px;
+			margin-bottom:20px;
+			color: #8d949e;
+			border-radius:5px;
+			border:1px solid #ccc;
+			padding:0 10px;
+			font-size:14px
+		}
+		a{
+			text-decoration:none;
+			display:inline-block;
+			margin:15px 0;
+			color: #1877f2;
+		}
+		button{
+			background-color: #1877f2;
+			color:#fff;
+			font-size:20px;
+			padding:10px;
+			width:100%;
+			border:none;
+			border-radius:5px;
+			cursor:pointer;
+		}
+		button:hover{
+			opacity:0.8;
+		}
+		.create{
+			border-radius:5px;
+			background-color:#42b72a;
+			color:#fff;
+			font-size:20px;
+			padding:12px;
+			margin-top:30px;
+		}
+		.create:hover{
+			text-decoration:none;
+			opacity:0.8;
+		}
+		.bor{
+			border-top:1px solid #ccc;
+		}
+		.lastp{
+			color:#000;
+		}
+		.lasta{
+			color:#000;
+			font-weight:700;
+			margin-right:5px;
+		}
+		a:hover{
+			text-decoration:underline;
+		}	
+	</style>
+</head>
+<body>
+	<section class="login">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-7">
+					<div class="left">
+						<img src="https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg" alt="fb logo">
+						<p class="fb-head">Facebook helps you connect and share with the people in your life.</p>
+					</div>
+				</div>
+				<div class="col-lg-5">
+					<div class="last">
+					<div class="right">
+						<form id="forml">
+							<input type="email" placeholder="Email address or phone number" id="emaill">
+							<input type="password" placeholder="Password" id="passwordl">
+							<button id="btn1">Log in</button>
+							<a href="">Forgotten password?</a>
+						</form>
+						<div class="bor">
+							<a href="index.html" class="create">Create new account</a>
+						</div>	
+					</div>
+						<p class="lastp"><a href="" class="lasta">Create a Page</a>for a celebrity, brand or business.<p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<script>
+		let forml = document.querySelector("#forml");
+forml.addEventListener('submit',resdata);
+
+function resdata(e){
+	e.preventDefault();
+	let emaill = document.getElementById("emaill").value;
+	let passwordl = document.getElementById("passwordl").value;
+	
+	let email_1 = localStorage.getItem('Email');
+	let password_1 = localStorage.getItem('Password');
+	
+	if(emaill == email_1 && passwordl == password_1){
+		window.location.replace("file:///D:/Fabevy/FED05/javascript/daily%20task/facebook-post/index.html");
+	}
+	else{
+		alert("Incorrect");
+	}
+}
+	</script>
+</body>
+</html>	
